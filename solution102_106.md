@@ -43,6 +43,99 @@ Calculation in 3D is too hard and too much, adding a dimension is easy, calculat
 (btw affinie trasformation is back to the origin )
 "affine == linear transformtion + translation" - angela  -->
 
+
+
+## Task 10.4 ##
+
+Yes, it is a affine transformation, because it can be displayed in one transformation matrix.
+
+There has been a transformation by 90°, a shearing by the factor 1, a scaling in the x-axis by the factor 1/2 and a translation by 1/2 on the x-axis.
+
+<br>
+<br>
+Matrix for rotation
+
+
+$$
+\left(\begin{array}{cc} 
+cos(90) & -sin(90)\\
+sin(90) & cos(90)
+\end{array}\right)
+$$ 
+
+<br>
+
+Matrix for scaling and shearing
+$$
+\left(\begin{array}{cc} 
+1 & -1\\
+0 & 1/2
+\end{array}\right)
+$$ 
+
+<br>
+
+Translation vector
+$$
+\left(\begin{array}{cc} 
+0\\
+1/2
+\end{array}\right)
+$$ 
+
+<br>
+
+which then can be represented in the equation
+
+$$
+M =
+\left(\begin{array}{cc} 
+cos(90) & -sin(90) & 0\\
+sin(90) & cos(90) & 0\\
+0 & 0 & 1
+\end{array}\right)
+\left(\begin{array}{cc} 
+1 & -1 & 0\\
+0 & 1/2 & 1/2\\
+0 & 0 & 1
+\end{array}\right)
+$$ 
+
+<br>
+
+which finally results through matrix multiplication into
+
+$$
+M =
+\left(\begin{array}{cc} 
+cos(90) & -cos(90)-sin(90)/2 & -25sin(a)\\
+sin(90) & -sin(90)+cos(90)/2 & 25cos(a)\\
+0 & 0 & 1
+\end{array}\right)
+$$
+
+<br>
+
+![Visualisation](images/Task_10-4.png "Visualisation") 
+
+<span style="color:green">original</span>  
+<span style="color:red">transformed</span>
+
+<br>
+<hr>
+
+## Task 10.5 ##
+
+The transformation represented by the matrix results in a scaling on the y and the z axis by a facter of 2 and a translation by 1 in all 3 dimensions.  
+
+the according visualisation would look like:
+
+![Visualisation](images/Task_10-5.png "Visualisation") 
+
+<span style="color:green">original cube</span>  
+<span style="color:red">transformed cube</span>
+
+
 ### 10.6
 
 #### What?
